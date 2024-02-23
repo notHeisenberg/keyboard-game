@@ -8,10 +8,12 @@ function afterPressWork(event) {
 
     const expectedKey = document.getElementById('current-text').innerText.toLocaleLowerCase();
     console.log(expectedKey)
+    // if ( keyPressed === "Escape"){
+    //     score()
+    // }
 
     if (keyPressed === expectedKey) {
 
-        console.log('milse')
         continueGame()
 
         removeBackgroundColor(expectedKey);
@@ -26,13 +28,13 @@ function afterPressWork(event) {
 
     }
     else{
-        console.log('mile nai')
+
 
         let lifeValue = getElementValueById('life-btn');
         console.log(lifeValue)
         lifeValue-=1;
         setElementValueById('life-btn',lifeValue);
-        if (lifeValue <= 0 ){
+        if (lifeValue <= 0 || keyPressed === "Escape"){
             removeBackgroundColor(expectedKey);
             score()
         }
