@@ -43,15 +43,16 @@
     <main
         class="bg-[#010313] bg-[url(/images/background.png)] bg-no-repeat bg-center min-h-screen text-center flex justify-center">
         <!-- home -->
-        <section id="1" class="flex flex-col justify-center items-center p-8 space-y-8 ">
+        <section id="home-section" class="flex flex-col justify-center items-center p-8 space-y-8 ">
             <h1 class="text-white font-anton text-9xl"><span class="text-red-500">ALPHABET</span> RUSH PRO</h1>
             <p class="text-white font-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn btn-accent border-none bg-white text-black text-xl">Play now</button>
+            <!--  -->
+            <button id="play-btn" onclick="play()" class="btn btn-accent border-none bg-white text-black text-xl">Play now</button>
 
         </section>
 
         <!-- play -->
-        <section id="2" class="flex flex-col   mt-48 space-y-12 hidden ">
+        <section id="play-section" class="flex flex-col   mt-48 space-y-12 hidden ">
             <!-- artBoard -->
             <div>
 
@@ -61,7 +62,7 @@
                         <p class="w-auto h-8 rounded-b-xl bg-[#010313CC] text-[#FFFFFF] p-2 ">Don't watch keyboard while
                             playing...</p>
                     </div>
-                    <div> <span class="text-9xl text-black font-poppins font-medium">Y<span>
+                    <div> <span id="current-text" class="text-9xl text-black font-poppins font-medium">Y<span>
                     </div>
                 </div>
 
@@ -120,7 +121,7 @@
 
         </section>
         <!-- score -->
-        <section id="3" class="flex flex-col justify-center text-white font-poppins hidden">
+        <section id="score-section" class="flex flex-col justify-center text-white font-poppins hidden">
             <div class="bg-playAgain rounded-2xl p-12 space-y-4">
                 <div class="text-6xl font-bold">
                     <p>Score : <span class="font-medium">0</span></p>
@@ -135,7 +136,8 @@
 
         </section>
     </main>
-
+<script src="./js/utility.js"></script>
+<script src="./js/events.js"></script>
 </body>
 
 </html>
