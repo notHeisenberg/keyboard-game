@@ -8,9 +8,9 @@ function afterPressWork(event) {
 
     const expectedKey = document.getElementById('current-text').innerText.toLocaleLowerCase();
     console.log(expectedKey)
-    // if ( keyPressed === "Escape"){
-    //     score()
-    // }
+    if ( keyPressed === "Escape"){
+        score()
+    }
 
     if (keyPressed === expectedKey) {
 
@@ -34,7 +34,7 @@ function afterPressWork(event) {
         console.log(lifeValue)
         lifeValue-=1;
         setElementValueById('life-btn',lifeValue);
-        if (lifeValue <= 0 || keyPressed === "Escape"){
+        if (lifeValue <= 0 ){
             removeBackgroundColor(expectedKey);
             score()
         }
